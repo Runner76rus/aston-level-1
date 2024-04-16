@@ -22,11 +22,7 @@ public class User {
     }
 
     public void setAge(int age) {
-        if (age > 0) {
-            this.age = age;
-        } else {
-            this.age = 0;
-        }
+        this.age = Math.max(age, 0);
     }
 
     public String getName() {
