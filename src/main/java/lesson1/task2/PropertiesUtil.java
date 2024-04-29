@@ -1,4 +1,4 @@
-package homework1.task2;
+package lesson1.task2;
 
 import java.io.IOException;
 import java.io.InputStream;

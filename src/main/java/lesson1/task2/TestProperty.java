@@ -1,4 +1,4 @@
-package homework1.task2;
+package lesson1.task2;
 
 public class TestProperty {
     public static void main(String[] args) {
