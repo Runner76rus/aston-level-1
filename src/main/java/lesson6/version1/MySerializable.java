@@ -1,4 +1,4 @@
-package lesson6;
+package lesson6.version1;
 
 
 import java.nio.file.Path;

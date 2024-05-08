@@ -1,4 +1,4 @@
-package lesson6;
+package lesson6.version1;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.StringJoiner;
 import java.util.stream.Stream;
 
-public class Message implements MySerializable<Message>{
+public class Message implements MySerializable<Message> {
 
     private long id;
     private String text;
@@ -63,9 +63,11 @@ public class Message implements MySerializable<Message>{
                 Text : %s
                 Author : %s
                 """.formatted(id, text, author));
-        for (String tag : tags) {
-            builder.append("#").append(tag).append(System.lineSeparator());
-        }
+        if (tags != null) {
+            for (String tag : tags) {
+                builder.append("#").append(tag).append(System.lineSeparator());
+            }
+        } else builder.append("tags = null").append(System.lineSeparator());
         builder.append("----------------------");
         return builder.toString().trim();
     }
